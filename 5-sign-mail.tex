@@ -1,0 +1,135 @@
+\chapter{Sign your mail}
+
+So you followed the path and got a gpg key. Wonderful.
+
+You can ask for some help on the tutorial address : \emph{Tuto-gpg @
+22decembre.eu}.
+
+Now, you will learn how to use your key with your mail.
+
+\subsection{How to make your various pen pals use your key
+?}\label{how-to-make-your-various-pen-pals-use-your-key}
+
+\subsubsection{Config' of mail client}\label{config-of-mail-client}
+
+First of all, you have to tell them about GPG. A little text on the
+bottom of your mail will be enough. This text is called
+\emph{signature}. Not to be confused with your GPG signature on your
+mail itself.
+
+Here is my English signature for example:
+
+\begin{quote}
+The file \textbf{\emph{signature.asc}} is not attached to be read by
+you. It's a digital signature by GPG.\\If you want to know why I use it,
+and why you should as well, you can read my article
+there:\\http://www.22decembre.eu/2015/03/21/introduction-en/
+\end{quote}
+
+This text is to be filled in your mail client config'. You will set
+there also your various choices for your GPG signatures.
+
+\paragraph{Kmail}\label{kmail}
+
+With Kmail, it's \textbf{\emph{Settings \textgreater{} Configure
+Kmail\ldots{} \textgreater{} Identities}}.
+
+There, you will find cryptography options, where you set which
+\textbf{\emph{private}} key to use to sign your mails.
+
+You will also indicate which \textbf{\emph{public}} key is to use when
+encrypting mail to yourself (pretty good way to share information across
+devices, like a wifi password !) About format, it is better to use
+\emph{OpenPGP/Mime} rather than \emph{inline}.
+
+It is also important to set your preference about mail composing in
+\textbf{\emph{Settings \textgreater{} Configure Kmail\ldots{}
+\textgreater{} Composing}}.
+
+I checked almost everything except \emph{Always show the encryption keys
+for approval}. The options are pretty well described for you to
+understand if you want to use them or not.
+
+\paragraph{Thunderbird}\label{thunderbird}
+
+\emph{You can also read this
+\href{https://support.mozilla.org/en-US/kb/digitally-signing-and-encrypting-messages}{documentation}.}
+
+In \textbf{\emph{Tools \textgreater{} Account Settings}}, select
+\emph{OpenPGP Security} under the address you want. Select the option
+\emph{Enable OpenPGP support (Enigmail) for this identity} and then
+\emph{Use email address of this identity to identify OpenPGP key}.
+
+You can then choose your defaults settings : encrypt, sign or not, and
+if you want to use \emph{PGP/Mime}, which I recommend.
+
+You have also some good options to set in \textbf{\emph{Enigmail
+\textgreater{} Preferences}}.
+
+\paragraph{Evolution}\label{evolution}
+
+\emph{Edit \textgreater{} Preferences}
+
+Select \emph{Mail accounts}, then the needed account and click
+\emph{Edit}.\\In the following account editor, go to the \emph{Security}
+tab on the far right, and in the field \emph{PGP/GPG Key ID} : copy the
+8 characters ID that your keys manager gave you. Remember to set your
+default options.
+
+When writing a new mail, in the \emph{Security} menu, click on \emph{PGP
+Sign} and/or \emph{PGP encrypt}.
+
+\subsubsection{Shall you sign and encrypt all your mail ?}\label{shall-you-sign-and-encrypt-all-your-mail}
+
+This question is more of ethical nature. It is a personal choice.
+
+Anyway, your software has certainly some big buttons that just want to
+be used to realise the cryptographic operations.
+
+I like Phil Zimmerman's thoughts on the matter:
+
+\begin{quote}
+What if everyone believed that law-abiding citizens should use postcards
+for their mail? If a nonconformist tried to assert his privacy by using
+an envelope for his mail, it would draw suspicion. Perhaps the
+authorities would open his mail to see what he's hiding. Fortunately, we
+don't live in that kind of world, because everyone protects most of
+their mail with envelopes. So no one draws suspicion by asserting their
+privacy with an envelope. There's safety in numbers. Analogously, it
+would be nice if everyone routinely used encryption for all their email,
+innocent or not, so that no one drew suspicion by asserting their email
+privacy with encryption. Think of it as a form of solidarity.
+\end{quote}
+
+Remember, you can always sign all your mail. It's pretty rare that it
+will cause trouble to your pen pals (mostly because they have a bad/old
+email client).
+
+\textbf{A signed mail is authentic. Your pen pal will be sure that it
+comes from you and that it has not been changed on the path. But it's
+still possible for everybody to read it.}
+
+But you can encrypt your mails only if your pen pals use GPG also,
+because you need their public key to encrypt mail for them.
+
+\subsection{Exercise}\label{exercise}
+
+Today, I am going to ask you to simply send me a signed mail. Bare
+simple !
+
+This is why I asked you to send me your key in the last article: I need
+it to check your signature. Checking your signature, I can insure you
+that you understood this part of the tutorial.
+
+So, let's do it : write a mail to \emph{Tuto-gpg @ 22decembre.eu}. You
+can say what ever you would like to say, send a picture, make a comment
+about the tutorial, say that you love me\ldots{}
+
+Before sending, use the \emph{Sign} option, or the button.\\If, like me,
+you setted your mail software to sign all your mail, you have nothing
+more to do than hitting the \emph{send} button now.
+
+When you send me your mail, check the
+\href{\{filename\}6-crypted-mail-en.md}{following} article !
+
+I am waiting forward reading from you soon.

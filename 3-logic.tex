@@ -1,0 +1,64 @@
+\chapter{A slice of theory and logical}
+
+Let's move on to the logical side now.
+
+\subsection{OpenPGP, how does it work ?}\label{openpgp-how-does-it-work}
+
+OpenPGP uses asymmetric cryptography, also called public-key
+cryptography.
+
+When talking about GPG keys, we actually talk about couples of keys : a
+public, and a private key.
+
+\subsection{Does it have to be that complicated ?}\label{does-it-have-to-be-that-complicated}
+
+When you sign a mail, you want to insure your pen pal that it's
+truthful. Same as seals in the Middle-Age : the seal's wax warranted
+message's inviolability.
+
+You have to sign your message with something you're the only one to
+possess : your \textbf{\emph{private}} key !
+
+And how do your pen pals would check this message is authentic ? With
+something that is well-known, available to anyone : checking signatures
+is done with your \textbf{\emph{public}} key !
+
+Opposite, when one encrypt (or cipher) a message, one wants to protect
+it. You are the only one who should be able to read it with something
+you are the only one to possess : your \textbf{\emph{private}} key !
+
+But as anyone should be able to send you encrypted mails, the ciphering
+operation should be done with something available to anyone : your
+\textbf{\emph{public}} key !
+
+\subsection{Be cautious !}\label{be-cautious}
+
+A signed mail \textbf{can be read by anybody online}. Just like a random
+mail actually.
+
+The signature warrant that you are the true sender and that it has not
+been altered. So a signed mail has more juridical value than a
+non-signed mail.
+
+\subsection{Summary}\label{summary}
+
+We sign mail with \emph{private} key. We check signed mail with the
+sender's \emph{public} key.
+
+We encrypt mails with the recipient \emph{public} key, and they decrypt
+with their \emph{private} key.
+
+It's always the same side of the liaison that uses the same side of the
+key: you will always (or almost) use your private key, and your pals
+will always use your public key.
+
+Your private key should be protected like Precious\ldots{}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{./images/gollum.jpg}
+\caption{}
+\end{figure}
+
+It allows you to control your side of the liaison, to prove your
+identity and read your mail !
