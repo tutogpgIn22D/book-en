@@ -1,0 +1,99 @@
+\documentclass[10pt,a4paper,openany]{book}
+\usepackage[english]{babel}
+
+\include{preambule}
+
+\title{\huge\bsc{Des chiffres et des lettres}}
+\author{Stéphane \bsc{22Decembre Guedon}}
+\date{13 mai 2015}
+
+\pretitle{\begin{center}}
+	
+\posttitle{
+	\newline
+		\Large\emph{Protect your online communications\\and other aspect of your life on the internet\\}
+		\vspace{5mm}
+		\LARGE\emph{GnuPG and OpenPGP for everybody\\}
+	\end{center}
+		}
+
+\preauthor{\centering
+	    \vspace{5mm}
+		\includegraphics[width=0.9\textwidth]{./images/logo-gnupg}
+		\vspace{1cm}
+		\newline
+	}
+
+\postauthor{
+	 \vspace{5mm}\\
+		}
+
+\predate{\begin{center} version 1 of }
+	
+	
+\postdate{\end{center}}
+	
+
+\begin{document}
+	%\makeatletter
+	\maketitle
+
+	%\frontmatter
+	\chapter{Préambule}
+	
+	This document uses my texts from my GPG-Howto or tutorial. It is the \textit{short} version, with the functions that I think are the most important in GnuPG and OpenPG.
+	
+	This How-to can be read on my website\footnote{english version: \url{http://www.22decembre.eu/category/howto-gpg.html}.} I wish you read, share and reshare this work, online (html) or off-line (this pdf).
+	
+	Of course, the texts have been slightly modified to correspond to their current form: a mini-book.
+	
+	The aim of this document is to push internet users, so actually some big pat of the occidental population, to protect their communications in the form of mails and instant messaging.
+	
+	As I am writing this book, some laws, extremely dangerous for privacy and public liberties, are being voted or adopted by several european countries. I think obviously of France, but also UK or Switzerland !
+	
+	This pdf file has been signed by my gpg key and the tutorial's one. Those two keys have been included in the pdf itself.
+	
+	Here are their fingerprints:
+	
+	\begin{center}
+		\oldstylenums{30CF 1DA5 7E87 6BAA 730D E561 42E0 A02E F1C9 35A4}
+	\end{center}
+	\begin{center}
+		\oldstylenums{F6B2 DCE3 B6F6 A972 FF3A 1C9B 2041 3A8E 7F36 CE55}
+	\end{center}
+	
+	The text of this document (my actual work) is under Creative Commons BY licence. I used some illustrations from external sources:
+	\begin{itemize}
+		\item The GnuPG logo, under CC-BY-SA licence\footnote{\url{http://www.gnupg.org}}
+		%\item l'illustration de la gpg cheat sheet, sous licence CC-BY-SA\footnote{text}
+		\item The comic from XKCD about password strength, under CC BY-NC 2.5 licence\footnote{\url{https://xkcd.com/936/}}
+		\item The shadow of Justice, under CC BY-NC-ND 2.0 licence.\footnote{\url{https://www.flickr.com/photos/jmtimages/3286566742/}}
+	\end{itemize}
+	
+	The sources of this document, in \LaTeX are available in the github  … . La version actuelle est … commit signé avec ma clé gpg.
+	
+	\tableofcontents
+	\include{0-intro}
+	\include{1-alternatives}
+	%\mainmatter
+	\include{2-install}
+	\include{3-logic}
+	\include{4-key-generate}	
+	\include{5-sign-mail}
+	\include{6-crypted-mail}
+	\include{7-sign-keys}
+	
+	\chapter{Various inspirations}
+	
+	\begin{description}
+		\item[TED conference, from Glenn Greenwald, one of the two journalists who helped Edward Snowden:] \url{https://www.ted.com/talks/glenn_greenwald_why_privacy_matters}
+			
+		\item[Security in a Box:]\url{https://securityinabox.org/en/women-hrds/thunderbird/windows}
+		
+		\item[OpenPGP Best Practices:]\url{https://help.riseup.net/en/security/message-security/openpgp/gpg-best-practices}
+		
+		\item[Miriam Ruiz's blog, Debian dev, whose name I used in the article about keys signing:]\url{http://www.miriamruiz.es/}\\
+		
+	\end{description}
+	
+\end{document}
