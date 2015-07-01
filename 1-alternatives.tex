@@ -1,0 +1,128 @@
+\chapter{Is there any other way than using GPG ?}
+
+\emph{NB : This article is much targeted to people with a special
+interest in IT technology itself as an overview of secure communication
+alternatives to GPG.\\Don't worry if you feel like this part is too
+complicated or like it's going over your head. You can safely skip this
+part or come there later when you understood more.}
+
+So, here we are. We have OpenPGP and its software implementations, PGP
+and GPG, which are tools to protect your mail from unwanted lookup. But
+is it the best way ?
+
+\subsection{Bitmessage}\label{bitmessage}
+
+Let's take a look at \href{http://n0where.net/bitmessage/}{Bitmessage}
+first. In my opinion, this is the perfect anti-example because it does
+not respect the
+\href{\{filename\}../Informatics/paradoxe-moquette-en.md}{carpet
+paradox} : the addresses look like strings made out of random
+characters, so they're a real hassle to exchange to your pen pals.
+
+Even give your address on a piece of paper could be risky because your
+friend may make a mistake while copying it. Like so easy to send your
+message to someone else now !\\I think the best way to share a
+Bitmessage address is to publish your address on a website you
+control.\\However, even if you take this route, you still have to be
+careful.
+
+The foundation of Bitmessage itself is easy to understand, but as soon
+as you dive deeper into it (a task I think is really important when
+talking about safety protocols), you it gets confusing rather quickly.
+
+\subsubsection{Some reflections on Bitmessage\ldots{}}\label{some-reflections-on-bitmessage}
+
+One unusual thing about Bitmessage that comes to mind is the way it uses
+P2P technology. The Bitmessage protocol works by sending a given message
+to everybody in the network.
+
+This makes it really less efficient with the energy. But it's also now
+trivial for attackers like the NSA (the group hackers are typically
+trying to escape from) to create their own Bitmessage address, collect
+every message sent on the network and try to decrypt it because
+apparently, it's
+\href{http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html}{what
+it already does} !
+
+Instead of sending messages only to the recipient, the Bitmessage
+protocol relly entirely on SSL/TLS cryptography to ensure privacy ! Not
+the safest, as I will explain later.
+
+\subsubsection{GPG or Bitmessage ?}\label{gpg-or-bitmessage}
+
+\emph{This is my opinion, my use of computing tools. This is not some
+sacred words to respect at all cost. A debate is possible. If you want
+to troll or whatever, feel free, but without me !}
+
+Given my above reflections, it's probably no surprise I prefer to use
+GPG rather than Bitmessage. Mail is a widely recognized communications
+channel, and even though I have ``no reason to hide'' - except privacy
+concerns - I do understand that other people have motivations to want to
+do so.\\This is especially true for those who want to hide who they are
+writing to.
+
+Use of Bitmessage marks me as a high-level \emph{hacker}, which I am
+not. I can barely pretend to be a \emph{little} hacker or a
+\emph{padawan}. Besides, using Bitmessage would further encourage people
+to watch my email.
+
+On the other hand, using signed or encrypted email, I still assume my
+mail is being watched but I'm also able to protect it, along with my
+privacy and the privacy of others. Since it is still plain email, many
+more people can still use it for many more day-to-day purposes, without
+learning whole new systems and while still being protected. Plus, the
+more I use GPG, the more my use of it encourages other people to use
+GPG, too.
+
+And if an attacker wants to decrypt my mail, all they'd learn about me
+is that I exchange thoughts with my lesbian friend, or some proposals
+that I'm developing at work. Basically, useless stuff for NSA \& Co !
+
+That said, there is a bonus: encrypting my mail is easy and takes no
+extra effort on my part, but decrypting it does. Our Big Brother friends
+have to spend enormous efforts and waste countless hours of CPU cycles
+to decrypt things.
+
+\begin{quote}
+And make worse the life of others you don't like is really enjoyable !
+\end{quote}
+
+\subsection{Other classic email enciphering schemes}\label{other-classic-email-enciphering-schemes}
+
+Another standard for encrypting and authenticating email is the S/Mime
+standard, which uses SSL/TLS certificates very much like those used by
+websites for encrypting Web traffic. Some entities and service providers
+even offer free certificates for personal use.
+
+It is the case of DanID, who mounted the authentication system NemID,
+used by the danish governement and banks. It is valid to sign and
+encrypt mail as well as authenticate on some websites, for example
+\href{http://www.dba.dk/}{DBA}, the danish ebay, but you can't use it to
+secure your website, sadly.
+
+There's much to be said for a nation-wide system of secure certificates
+like NemID, which are one step towards a digital citizen ID card, after
+all. But the SSL/TLS protocol on which it is based have had numerous,
+well-known problems lately. There's widespread concern that the NSA
+(along with some other agencies) have been able to compromise the
+certificate infrastructure or even break some of its crypto algorithms.
+
+Personally, I tend not to trust TLS too much, because the more we look
+at it, the more holes we see in it.
+
+\textbf{\emph{Yet, I still recommand TLS use in web browsing ! A weak
+shield is better than no shield at all !}}
+
+SSL/TLS and GPG are a slightly different implementation of the same
+principle : asymetrical cryptography, with a public and a private key.
+But actually, I don't believe it to be easier and certainly not safer to
+use SSL/TLS.
+
+\subsection{Back to GPG}\label{back-to-gpg}
+
+GPG tries to respect the carpet paradox: it uses well-known, easy to
+understand protocols (the standard email protocol itself).\\The keys can
+be identified by the mail address, or the fingerprint, easy to search
+and giving a good feeling of security to users.
+
+And, evidently, it's not been broken yet!
