@@ -2,36 +2,27 @@
 
 Let's do some actual stuff : install the softwares.
 
-\subsection{What we need}\label{what-we-need}
+\section{What we need}\label{what-we-need}
 
 To use GPG you need\ldots{}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  GPG
-\item
-  A keys manager like :
+%\itemsep1pt\parskip0pt\parsep0pt
+\item GPG
+\item A keys manager like :
 
   \begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item
-    Kgpg/Kleopatra
-  \item
-    Enigmail
+  \item Kgpg/Kleopatra
+  \item Enigmail
   \end{itemize}
-\item
-  A mail software like :
+  
+\item A mail software like :
 
   \begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item
-    kmail
-  \item
-    Thunderbird
-  \item
-    Evolution
+  \item Kmail
+  \item Thunderbird
+  \item Evolution
   \end{itemize}
 \end{enumerate}
 
@@ -42,99 +33,80 @@ matter of personal preferences.
 Kgpg is a part of KDE, mostly used with Kontact and Kmail. Same,
 Enigmail works with Thunderbird.
 
-\emph{The Samsungs devices with Android are now shipped with all the
-correct tools including GPG. You can use and create keys with it.\\The
-problem is that you can't really trust the hardware nor the software. I
-think it's a good idea to just begin. After that, you might want to set
-new keys using a true computer.}
+\begin{notice}
+	The Samsungs devices with Android are now shipped with all the
+	correct tools including GPG. You can use and create keys with it.\\The
+	problem is that you can't really trust the hardware nor the software. I
+	think it's a good idea to just begin. After that, you might want to set
+	new keys using a true computer.
+\end{notice}
 
-By the way, you can also setup a personal mail server.\\It becomes
-available to the non-computing guy with
-\href{https://yunohost.org/}{YunoHost} for example.\\Or in another way,
-OpenBSD, really easy to install, yet a bit difficult to master. But, as
-I manage both systems now, I can tell it's not harder than a Debian!
+By the way, you can also setup a personal mail server. It becomes
+available to the non-computing guy with YunoHost\footnote{\url{https://yunohost.org/}} for example. Or in another way,
+OpenBSD, really easy to install, yet a bit difficult to master. But, as I manage both systems now, I can tell it's not harder than a Debian!
 
-\subsubsection{Recommendations}\label{recommendations}
+\section{Recommendations}\label{recommendations}
 
 \begin{quote}
 Much of these recommendations are for general use, not only GPG.
 \end{quote}
 
-You ought to avoid webmail. Webmail is a bad thing, as you access your
-mail through the web, so we can't ensure of safety, without even
-thinking of GPG itself!
+\subsection{Mail safety}
 
-You also ought to avoid fetching softwares on third-parties websites but
-rather on the author's one, or an official website like Apple's one in
-case of you being a MacOS user.
-
-When you can use free or open-source software, please do so. It's even
-more important in critical protocols like security ones. Being open, the
-code can be read by anyone and anybody can tell that there's no
-backdoors or bad habits.
-
-An \emph{opensource} code means that you can trust it to \emph{protect
-yourself, and your privacy with it} ! And if you're really a paranoiac
-(your right) then you can take code cursus and then do this checking
-yourself!
-
-When installing or setting a software, don't hit ``enter'' all the time.
-Check the options. It is frequent that an install program contains a
-toolbar or something else you did not ask nor need.
-
-These micro add-ons are one of the main source of your computer being
-slow, buggy, and can contain viruses or spy softwares.
-
-Some software writers sign their binaries (the file to download) with
-their GPG key or indicate MD5 or SHA1 sums.
-
-I have not told you yet how to check these signatures, but if you know
-how to do it, please do!
+You ought to avoid webmail. Webmail is a bad thing, as you access your mail through the web, so we can't ensure of safety, without even
+thinking of GPG itself! You also ought to avoid fetching softwares on third-parties websites but rather on the author's one, or an official website like Apple's one in case of you being a MacOS user.
 
 Encrypting and signing mail does not protect you from viruses ! They
 warrant that your mail is authentic and/or has not been read by anyone
 but the recipient.
 
-\subsection{GPG}\label{gpg}
+\subsection{Softwares safety}
 
-\subsubsection{Linux and co}\label{linux-and-co}
+When you can use free or open-source software, please do so. It's even more important in critical protocols like security ones. Being open, the code can be read by anyone and anybody can tell that there's no backdoors or bad habits. An \emph{opensource} code means that you can trust it to \emph{protect yourself, and your privacy with it} ! And if you're really a paranoiac (your right) then you can take code cursus and then do this checking yourself!
 
-Gpg is somewhat a standard in any GNU/Linux distribution. If you don't
-have it already, it means your distro is that weird I even don't know
+When installing or setting a software, don't hit ``enter'' all the time. Check the options. It is frequent that an install program contains a
+toolbar or something else you did not ask nor need. These micro add-ons are one of the main source of your computer being slow, buggy, and can contain viruses or spy softwares.
+
+Some software writers sign their binaries (the file to download) with their GPG key or indicate MD5 or SHA1 sums. I have not told you yet how to check these signatures, but if you know how to do it, please do!
+
+\section{GPG}\label{gpg}
+
+\begin{notice}
+As said somewhere else, \emph{OpenPGP} is the standard, the rule describing the whole protocol (messages formats, ciphers to use, signing or encrypting operations…). \emph{GPG}, or \emph{GnuPG} is a software designed to comply with this standard. It is this software that will perform all technical operations.\\
+\\
+Later, I can say \emph{OpenPGP} or \emph{GPG key}. It is the same.\\
+\\
+When talking about the general operation, meaning the protocol, I will say \emph{OpenPGP}. When saying \emph{GPG}, I refer to the software itself.
+\end{notice}
+
+\subsection{Linux and co}\label{linux-and-co}
+
+Gpg is somewhat a standard in any GNU/Linux distribution. If you don't have it already, it means your distro is that weird I even don't know
 much about it, nor its packaging tool ( \emph{Slitaz} ? )
 
-Under Debian \& co, if not already installed - which would be really
-weird, as Debian uses gpg to sign and check its softwares packages (!) -
-it is it:
+Under Debian \& co, if not already installed - which would be really weird, as Debian uses gpg to sign and check its softwares packages (!) - it is it:
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install gnupg gnupg2
-\end{verbatim}
+\end{lstlisting}
 
 The second release is the recommended one currently.
 
 No matter, it's in the general dependencies of all key managers we'll
-see later.
-
-Users of other distros or graphical tools like Synaptic, Apper or Muom
-will simply make a research about \textbf{gnupg}. Much chance is that
+see later. Users of other distros or graphical tools like Synaptic, Apper or Muom will simply make a research about \textbf{gnupg}. Much chance is that
 your package manager tell you it's already there.
 
 It's also in BSD base, like on OpenBSD.
 
-\subsubsection{Windows}\label{windows}
+\subsection{Windows}\label{windows}
 
 This is a big one !
 
-You need \href{http://www.gpg4win.org/download.html}{Gpg4win - take the
+You need Gpg4win\footnote{\url{http://www.gpg4win.org/download.html} - take the
 one on the top, unless you know what you're doing}, which
-\href{http://www.gpg4win.org/about.html}{actually contains all the
-needed softwares} : keys manager, mail client\ldots{}
+actually contains all the needed softwares\footnote{\url{http://www.gpg4win.org/about.html}} : keys manager, mail client\ldots{}
 
-Windows users, you have an easy life !
-
-As soon as the installer is downloaded, launch it. It will propose you
-to install GPG and other softwares.
+Windows users, you have an easy life ! As soon as the installer is downloaded, launch it. It will propose you to install GPG and other softwares.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -149,146 +121,114 @@ recommend it. I use it from time to time and if you need help, it will
 be easier for me if you use this one.
 
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  GpgOL, Outlook plugin
-\item
-  GpgEX, Windows files explorer plugin.
+\item GpgOL, Outlook plugin
+\item GpgEX, Windows files explorer plugin.
 \end{itemize}
 
 Install them if you want or need.
 
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Claws-Mail, lightweight mail client
+\item Claws-Mail, lightweight mail client
 \end{itemize}
 
-\subsubsection{MacOS}\label{macos}
+\subsection{MacOS}\label{macos}
 
-Thunderbird is available on Mac and the native mail client can also
-support encryption.
+Thunderbird is available on Mac and the native mail client can also support encryption.\\
 
-You need \href{https://gpgtools.org/}{Gpg pour Mac}. Please download the
-Gpg Suite.
-
-You can (actually you \emph{should}) check dmg file integrity by going
+You need the Gpg Suite\footnote{\url{https://gpgtools.org/}}. Please download it. You can (actually you \emph{should}) check dmg file integrity by going
 in your Downloads repository (I suppose here it's called
 \emph{Downloads}) with your Terminal:
 
-\begin{verbatim}
+\begin{lstlisting}
 cd Downloads
-openssl sha1 GPG_Suite…
-\end{verbatim}
+openssl sha1 GPG_Suite\ldots{}
+\end{lstlisting}
 
-Typing filename, you can use auto-completion : use tab key, the terminal
-will complete the filename itself.
+Typing filename, you can use auto-completion : use tab key, the terminal will complete the filename itself.
 
-The ssl command will generate a string of characters which have to
-correspond to the one indicated on the website, just under download
+The ssl command will generate a string of characters which have to correspond to the one indicated on the website, just under download
 button. If it fails, bare download again.
 
-So you can install now. Open the dmg file and select the correct
-options. You need \emph{MacGPG2}, \emph{GPGPreferences}, \emph{GPG
-Keychain Access}.
+So you can install now. Open the dmg file and select the correct options. You need \emph{MacGPG2}, \emph{GPGPreferences}, \emph{GPG Keychain Access}.
 
-If you use \textbf{Mail}, the native client, you need \textbf{GPG for
-Mail} but if you use Thunderbird, you need \textbf{GPG Services}.
+If you use \textbf{Mail}, the native client, you need \textbf{GPG for Mail} but if you use Thunderbird, you need \textbf{GPG Services}.
 
-\subsection{A mail client}\label{a-mail-client}
+\section{A mail client}\label{a-mail-client}
 
-\begin{quote}
+\begin{notice}
 I won't describe mail and address configuration. If you came there, I
 believe you're motivated to learn/search the solution yourself or you
 already know how to do it.
-\end{quote}
 
-\begin{quote}
-Yet, one can still \href{\{filename\}../pages/contact.md}{contact me} to
-ask for help and a basic tutorial for setting Thunderbird is available
-\href{https://support.mozilla.org/en-US/kb/new-email-address}{there}.
-\end{quote}
+Yet, one can still contact me\footnote{through the tutorial address or \url{http://www.22decembre.eu/en/contact.html}} to
+ask for help and a basic tutorial for setting Thunderbird is available on its website\footnote{\url{https://support.mozilla.org/en-US/kb/new-email-address}}.
+\end{notice}
 
-So, you have the base software, but nothing else currently. Choose your
-mail client.
+So, you have the base software, but nothing else currently. Choose your mail client.
 
-\subsubsection{Thunderbird}\label{thunderbird}
+\subsection{Thunderbird}\label{thunderbird}
 
-Thunderbird is available for downloading
-\href{https://www.mozilla.org/en-US/thunderbird/}{there} (link for your
-language and your operating system).
+Thunderbird is available for downloading for most languages and platforms.\footnote{\url{https://www.mozilla.org/en-US/thunderbird/} (link for your language and your operating system)}
 
-It is also available in Debian under the name Icedove due to
-\href{http://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project}{the
-Mozilla-Debian issue}.
+So you can install it with apt\footnote{It has been renamed Icedove in Debian due to the Mozilla-Debian issue : 
+	\url{http://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project}.}:
 
-So you can install it with apt:
-
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install icedove
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Kmail and Evolution}\label{kmail-and-evolution}
+\subsection{Kmail and Evolution}\label{kmail-and-evolution}
 
 Kmail is a part of KDE, Evolution is a part of Gnome. So if you are
 under GNU/Linux, you should use your favorite package manager.
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install kmail
 
 apt-get install evolution
-\end{verbatim}
+\end{lstlisting}
 
 Same as before : Synaptic or other graphical installers will setup all
 dependencies, including \textbf{gnupg} if for some weird reason it's not
 already the case.
 
-\subsubsection{Claws-Mail}\label{claws-mail}
+\subsection{Claws-Mail}\label{claws-mail}
 
 If you are on Windows, remember that the Gpg4win installer proposed you
 to install as well \textbf{Claws-Mail}.
 
-\subsubsection{The others}\label{the-others}
+\subsection{The others}\label{the-others}
 
-There is a \href{https://windows.kde.org/}{Windows version of KDE}, but
-I never tried to use it - I feel already really fine on GNU/Linux and
-don't see why I should change that.
-
-Sylpheed, mail client available under Linux distributions, Windows, Mac
+There is a Windows version of KDE\footnote{\url{https://windows.kde.org/}}, but I never tried to use it - I feel already really fine on GNU/Linux and
+don't see why I should change that. Sylpheed, mail client available under Linux distributions, Windows, Mac
 and other Unix.
 
-\subsection{A keys manager}\label{a-keys-manager}
+\section{A keys manager}\label{a-keys-manager}
 
-\begin{quote}
+\begin{notice}
 To remind you : You need only one of these softwares. Often the choice
 much depends on your environment (operating system).
-\end{quote}
+\end{notice}
 
-\subsubsection{GPG Keychain under Mac
-OS}\label{gpg-keychain-under-mac-os}
+\subsection{GPG Keychain under Mac OS}\label{gpg-keychain-under-mac-os}
 
 The keys manager is named GPG Keychain under Mac Os and you have already
 installed it normally when you installed Gpg for Mac.
 
-\subsubsection{Thunderbird : Enigmail}\label{thunderbird-enigmail}
-
-\textbf{\emph{The same day this article was published, Enigmail released
-a new versionas well : 1.8.1. You should use this new one as it is much
-more usable.}}
+\subsection{Thunderbird : Enigmail}\label{thunderbird-enigmail}
 
 If you use Thunderbird, you will need Enigmail, which is actually a
 plugin used by Thunderbird to interact with Gpg.
 
-\paragraph{First way : Downloading on the
-website}\label{first-way-downloading-on-the-website}
+\subsubsection{First way : Downloading on the website}\label{first-way-downloading-on-the-website}
 
-Installation here is the same as a Firefox module : xpi.\\You need to
-download the module \href{https://www.enigmail.net/download/}{there} and
+Installation here is the same as a Firefox module : xpi. You need to
+download the module\footnote{\url{https://www.enigmail.net/download/}} and
 of course take the one corresponding to your operating system.
 
 The xpi extension setup as described there : you need to launch
 Thunderbird, select «Tools» in the menus bar on top, then
-«add-ons»,«plugins», «extensions» or «modules».\\Or, depending on your
+«add-ons»,«plugins», «extensions» or «modules». Or, depending on your
 version of Thunderbird, select the big button on top and right and
 select «add-ons».
 
@@ -296,61 +236,55 @@ Here, you can tell Thunderbird that you want to install a plugin
 clicking on the bottom left on «install\ldots{}». Thunderbird will ask
 you where you downloaded the xpi.
 
-\paragraph{Second way : Install with Thunderbird
-itself}\label{second-way-install-with-thunderbird-itself}
+\subsubsection{Second way : Install with Thunderbird itself}\label{second-way-install-with-thunderbird-itself}
 
-You can ask Thunderbird to install it itself.
-
-Like previously, go to the add-ons window and make a research about
+You can ask Thunderbird to install it itself. Like previously, go to the add-ons window and make a research about
 Enigmail. The software should appears on top of the list with an install
 button.
 
 Once you installed the plugin, you need to reboot Thunderbird itself.
 That's it.
 
-\paragraph{Debian Bonus : installation via
-Apt}\label{debian-bonus-installation-via-apt}
+\subsubsection{Debian Bonus : installation via Apt}\label{debian-bonus-installation-via-apt}
 
 If you use Icedove (sic !) you can also install Enigmail with apt. It is
-good if you share your computer with other users.
-
-But if you do it this way, take care when upgrading : don't upgrade on
-Mozilla request but bare wait for Debian to update it!
-
-If you wish to use another release than the one in Debian apt store,
+good if you share your computer with other users. But if you do it this way, take care when upgrading : don't upgrade on
+Mozilla request but bare wait for Debian to update it! If you wish to use another release than the one in Debian apt store,
 uninstall it using apt before.
 
-\textbf{\emph{One only release of this software per machine ! I believe
-it to be a safety mesure.}}
+\begin{warning}
+One only release of this software per machine ! I believe
+it to be a safety mesure.
+\end{warning}
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install enigmail
-\end{verbatim}
+\end{lstlisting}
 
-\emph{NB : If Debian did it, why not others like Mageïa or Arch ? Try to
-find Enigmail in your packages manager.}
+\begin{notice}
+If Debian did it, why not others like Mageïa or Arch ? Try to
+find Enigmail in your packages manager.
+\end{notice}
 
-\subsubsection{Kgpg/Kleopatra}\label{kgpgkleopatra}
+\subsection{Kgpg/Kleopatra}\label{kgpgkleopatra}
 
 Kgpg and Kleopatra are two softwares used to manage keys and
 certificates in KDE. I prefer to use Kgpg, but it's still useful to have
-both installed.
+both installed. If you are a KDE fan like I am, then chances are that they are already
+there. Else, as previously :
 
-If you are a KDE fan like I am, then chances are that they are already
-there.\\Else, as previously :
-
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install kgpg kleopatra
-\end{verbatim}
+\end{lstlisting}
 
 Remember, if you are under Windows, you got Kleopatra in Gpg4win
 installer.
 
-\subsubsection{The others}\label{the-others-1}
+\subsection{The others}\label{the-others-1}
 
 Under Gnome, you have Seahorse, which I don't know at all. I doubt that
 it is really different from Kgpg. Available under Debian :
 
-\begin{verbatim}
+\begin{lstlisting}
 apt-get install seahorse
-\end{verbatim}
+\end{lstlisting}
