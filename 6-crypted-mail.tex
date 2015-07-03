@@ -1,92 +1,59 @@
 \chapter{Read and write encrypted mail}
 
-Let's go further. You will encrypt your mail. It was the first objective
-of this article series. Yet, there is more to come !
+Let's go further. You will encrypt your mail. It was the first objective of this article series. Yet, there is more to come !
+Did you followed the previous steps ? So, I must have sent you a mail. It is encrypted and you are the only one able to read it.
 
-Did you followed the previous steps ?
-
-So, I must have sent you a mail. It is encrypted and you are the only
-one able to read it.
-
-\subsection{What did I do ?}\label{what-did-i-do}
+\section{What did I do ?}\label{what-did-i-do}
 
 When I received your public key, I imported it in my keyring.\\It
 allowed me to analyze it and mail you back this answer: \emph{yes, your
 key is fine}.
 
-\subsection{Consequences}\label{consequences}
+\section{Consequences}\label{consequences}
 
 As I received your public key, I can now send you encrypted mail.
 
-\textbf{If you received an encrypted mail, you are normally the only
-person able to read it. But it does not tell you about the sender.}
+\textbf{If you received an encrypted mail, you are normally the only person able to read it. But it does not tell you about the sender.}
 
-But if I sign it, you can't check the signature, as you need my public
-key to do so, and I have not yet told you how to do it.
+But if I sign it, you can't check the signature, as you need my public key to do so, and I have not yet told you how to do it.
 
 \textbf{Signing a mail means that I am the true sender of it.}
 
 This is the reason your mail software says that this mail is signed with
 gpg, but it can't check the signature.
 
-\subsection{Some little caution}\label{some-little-caution}
+\section{Some little caution}\label{some-little-caution}
 
-Be cautious. Only the main body of the mail is encrypted. The header,
-subject and other meta-datas (who sent the mail, to whom\ldots{}) are
-clair and readable text. It is hard or even impossible to do in another
-way: how mail servers could know whose mail it is and who to give it if
+Be cautious. Only the main body of the mail is encrypted. The header, subject and other meta-datas (who sent the mail, to whom\ldots{}) are
+clair and readable text. It is hard or even impossible to do in another way: how mail servers could know whose mail it is and who to give it if
 destination is not available ?
 
-Thus, it is good practice to set a neuter subject if you want to insure
-good confidentiality.
+Thus, it is good practice to set a neuter subject if you want to insure good confidentiality.
 
-Something like «a good plan» rather than «the great plan to world's
-domination !» or «last production figures» rather than «prod' figures
+Something like «a good plan» rather than «the great plan to world's domination !» or «last production figures» rather than «prod' figures
 rising by 50 \%: everything is good baby !»
 
-\subsection{How to get the public key ?}\label{how-to-get-the-public-key}
+\section{How to get the public key ?}\label{how-to-get-the-public-key}
 
-\subsubsection{By mail}\label{by-mail}
+\subsection{By mail}\label{by-mail}
 
-I could have send you the public key by mail in the same way as you did.
+I could have send you the public key by mail in the same way as you did. But this is not safe: a malicious person could have hijacked your mail and replaced your key by another. This is the kind of thoughts I would like you to have: safety on internet is a process, a way of thinking.
 
-But this is not safe: a malicious person could have hijacked your mail
-and replaced your key by another.
+\subsection{On the web}\label{on-the-web}
 
-This is the kind of thoughts I would like you to have: safety on
-internet is a process, a way of thinking.
+You can place your key on a webpage if you have one. In that case, it is good policy to indicate the fingerprint. A key fingerprint is a series of numbers and characters unique to the key. It allows to identify (quite safely) a key and same time insure it of its integrity. Your keys manager can give you this fingerprint. It looks like this :
 
-\subsubsection{On the web}\label{on-the-web}
+\begin{center}
+	\oldstylenums{30CF 1DA5 7E87 6BAA 730D E561 42E0 A02E F1C9 35A4}
+\end{center}
 
-You can place your key on a webpage if you have one. In that case, it is
-good policy to indicate the fingerprint.
+This fingerprint is the one of \emph{Tuto-gpg @ 22decembre.eu} GPG key. It is the same principle as MD5 sums\footnote{\url{http://en.wikipedia.org/wiki/MD5}} for downloaded files other the net - Linux distribution iso image for example. Some persons also set their key fingerprint on their business card, easier to give them.
 
-A key fingerprint is a series of numbers and characters unique to the
-key. It allows to identify (quite safely) a key and same time insure it
-of its integrity.
-
-Your keys manager can give you this fingerprint. It looks like this :
-
-\begin{verbatim}
-30CF 1DA5 7E87 6BAA 730D E561 42E0 A02E F1C9 35A4
-\end{verbatim}
-
-This fingerprint is the one of \emph{Tuto-gpg @ 22decembre.eu} GPG key.
-
-Same principle as \href{http://en.wikipedia.org/wiki/MD5}{MD5 sums} for
-downloaded files other the net - Linux distribution iso image for
-example.
-
-Some persons also set their key fingerprint on their business card,
-easier to give them.
-
-\subsubsection{On the keys servers}\label{on-the-keys-servers}
+\subsection{On the keys servers}\label{on-the-keys-servers}
 
 Knowing a key fingerprint, it is also possible to find it on the
 internet ! Actually, on such servers called «keys servers» or «gpg
-servers».
-
-Here are some servers:
+servers». Here are some servers:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -101,40 +68,22 @@ Here are some servers:
   hkp(s)://keys.gnupg.net/
 \end{itemize}
 
-You can tell gpg which server to use first with your keys manager
-settings.
+You can tell gpg which server to use first with your keys manager settings. The S indicate that you use the server with a secure TLS connexion. This way, if you're a paranoiac, no one knows which keys you are searching. These servers allow you to make your key public, find keys of people you don't know, and finally check their mails signatures.
 
-The S indicate that you use the server with a secure TLS connexion. This
-way, if you're a paranoiac, no one knows which keys you are searching.
+\section{Exercise}\label{exercise}
 
-These servers allow you to make your key public, find keys of people you
-don't know, and finally check their mails signatures.
+The exercise is to find the tutorial key and send me an encrypted mail.
 
-\subsection{Exercise}\label{exercise}
+\subsection{Find the key}\label{find-the-key}
 
-The exercise today is to find the tutorial key and send me an encrypted
-mail.
+As you understood it, the aim is to make you understand the way keys servers work.
 
-\subsubsection{Find the key}\label{find-the-key}
+Open your keys manager, and then the dialog box to servers. It will ask you for a string to search, meaning a fingerprint or a mail address.
+You can copy-paste the key fingerprint or the mail address (both written above). Your keys manager will then show you some keys to download.
+Either you wrote the mail address, and shall check the fingerprint, or opposite, copied the fingerprint and shall check the address. I actually
+created several keys, not to screw you but to make you think and work your logic.
 
-As you understood it, the aim is to make you understand the way keys
-servers work.
-
-Open your keys manager, and then the dialog box to servers. It will ask
-you for a string to search, meaning a fingerprint or a mail address.
-
-You can copy-paste the key fingerprint or the mail address (both written
-above).
-
-Your keys manager will then show you some keys to download.
-
-Either you wrote the mail address, and shall check the fingerprint, or
-opposite, copied the fingerprint and shall check the address. I actually
-created several keys, not to screw you but to make you think and work
-your logic.
-
-This tutorial aims at teach you to use GPG. So you have to use it and
-confront it.
+This tutorial aims at teach you to use GPG. So you have to use it and confront it.
 
 By the way, please note that these persons signed the key:
 
@@ -146,9 +95,7 @@ By the way, please note that these persons signed the key:
   \href{http://lehollandaisvolant.net/}{le hollandais volant}
 \end{itemize}
 
-They helped me in some ways, because I could use their texts, or they
-encouraged me to write this tutorial.\\These other persons also helped
-me:
+They helped me in some ways, because I could use their texts, or they encouraged me to write this tutorial. These other persons also helped me:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -159,24 +106,13 @@ me:
   texts.
 \end{itemize}
 
-I wish to thank them all. If you want to thank me as well, feel free to
-give a nice word in your mail, or some little money on the flattr button
-in the left column.
+I wish to thank them all.
 
-Now, look at the mail I send you: your mail software might have change
-its announcement!
+Now, look at the mail I send you: your mail software might have change its announcement!
 
-\subsubsection{Write an encrypted mail}\label{write-an-encrypted-mail}
+\subsection{Write an encrypted mail}\label{write-an-encrypted-mail}
 
-You have to write me an encrypted mail. You can also sign it, but it is
-not the aim of this part. Do as you want.
-
-Just before sending it, select the \emph{Encrypt} option or button. Here
-it is !
-
-Maybe your mail software even proposed you to encrypt the mail while
-writing it because you now have the needed key.
-
+You have to write me an encrypted mail. You can also sign it, but it is not the aim of this part. Do as you want.
+Just before sending it, select the \emph{Encrypt} option or button. Here it is !
+Maybe your mail software even proposed you to encrypt the mail while writing it because you now have the needed key.
 Isn't it beautiful?
-
-Hey, come to read the \href{\{filename\}7-sign-keys-en.md}{last one}!
