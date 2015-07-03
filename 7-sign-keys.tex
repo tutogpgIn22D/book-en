@@ -1,7 +1,6 @@
 \chapter{Sign keys}
 
-I wish you to be able to begin using gpg, so you need as well to sign
-keys, at least with your few friends or family members who read this
+I wish you to be able to begin using gpg, so you need as well to sign keys, at least with your few friends or family members who read this
 tutorial.
 
 \section{Sign keys\ldots{}}\label{sign-keys}
@@ -10,47 +9,17 @@ Yes, with gpg, one can sign mails, files, and \ldots{} gpg keys !
 
 \emph{So delicious}
 
-Remember, I began talking about it in the \href{\{filename\}6-crypted-mail-en.md}{previous article}.
-
-When you sign a key, you grant it some credit, and you indicate it to
-everybody fetching your signature.
-
-Signing a key sets its owner to be legitimate.
-
-We are going to call it \emph{immediate trust links} (ITL to be short):
-these are all the persons that you have meet and checked ID and signed
-the key.
-
-Please be aware it's a concept that I define here, for practical
-reasons, helping you to understand.
+When you sign a key, you grant it some credit, and you indicate it to everybody fetching your signature. Signing a key sets its owner to be legitimate. We are going to call it \emph{immediate trust links} (ITL to be short): these are all the persons that you have meet and checked ID and signed the key. Please be aware it's a concept that I define here, for practical reasons, helping you to understand.
 
 \section{An identity problem}\label{an-identity-problem}
 
-Let's take an example: John asks you to sign his key.
+Let's take an example: John asks you to sign his key. You shall first verify that John is the owner of the key, so check with him the fingerprint. You shall then verify John identity, looking on his ID with a photo, but not only. Identity is much larger: it's also every other sides of a person. What function he holds in an association, blog writer, social networks\ldots{}
 
-You shall first verify that John is the owner of the key, so check with
-him the fingerprint.
-
-You shall verify John identity, looking on his ID with a photo, but not
-only. Identity is much larger: it's also every other sides of a person.
-
-What function he holds in an association, blog writer, social
-networks\ldots{}
-
-Everything that gives you more confidence in John's identity should be
-checked.
-
-As soon as this various points are validated, you are sure that it is
-the right key and the right person. Then you can sign it.
+Everything that gives you more confidence in John's identity should be checked. As soon as this various points are validated, you are sure that it is the right key and the right person. Then you can sign it.
 
 \section{Trust}\label{trust}
 
-Signing a key, you also grant a trust level to the owner.
-
-These two are linked but also distinguished things, and it is important
-to understand it.
-
-There are five trust levels.
+Signing a key, you also grant a trust level to the owner. These two are linked but also distinguished things, and it is important to understand it. There are five trust levels.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -66,37 +35,18 @@ There are five trust levels.
   absolute/it's my key
 \end{itemize}
 
-These trust levels indicate which confidence you have in the owner's
-ability to check ID and maintain their immediate trust links (ITL). And
-also what confidence you have in their judgment regarding other person's
-behavior.
+These trust levels indicate which confidence you have in the owner's ability to check ID and maintain their immediate trust links (ITL). And
+also what confidence you have in their judgment regarding other person's behavior. For example, you can check one of your sibling's key. So you trust \textbf{\emph{that precise}} key !
 
-For example, you can check one of your sibling's key. So you trust
-\textbf{\emph{that precise}} key !
+But you feel that your sibling is still not fully OK with OpenPGP. Maybe he signs without much precaution, or grant a trust level too much high. So you don't trust his ITL, you sign his key but with a \emph{none} trust.
 
-But you feel that your sibling is still not fully OK with OpenPGP. Maybe
-he signs without much precaution, or grant a trust level too much high.
-
-So you don't trust his ITL, you sign his key but with a \emph{none}
-trust.
-
-That low trust level is something you can (\emph{should} !) do without
-shame or fear. For that purpose, the trust level is written in the
+That low trust level is something you can (\emph{should} !) do without shame or fear. For that purpose, the trust level is written in the
 signature in a way that it remains a \emph{private} information.
 
 \textbf{\emph{Expressing your trust and judgment about a person is free speech !}}
 
-The more you will respect such considerations, the more your own
-judgment will be respected by your peers, particularly people you know
-the most, and the more your own ITL will be granted high trust value as
-well.
-
-I think that we should sign with a marginal trust by default and grant
-full trust only to people we know they behave really serious with
-OpenPGP.
-
-Your ITL is constituted of the keys (and their owners) that you have
-signed and also the trust level you have granted them.
+The more you will respect such considerations, the more your own judgment will be respected by your peers, particularly people you know
+the most, and the more your own ITL will be granted high trust value as well. I think that we should sign with a marginal trust by default and grant full trust only to people we know they behave really serious with OpenPGP. Your ITL is constituted of the keys (and their owners) that you have signed and also the trust level you have granted them.
 
 \section{Examples}\label{examples}
 
@@ -104,207 +54,101 @@ You meet some people in a bar when there is a meeting of your LUG.
 
 \subsection{Arthur}\label{arthur}
 
-Arthur tells you that he begins using GPG and wish to build his Web of
-Trust. \emph{OK}.\\You verify correctly his identity and he does the
-same to you. Then, at home, you sign his key.
+Arthur tells you that he begins using GPG and wish to build his Web of Trust. \emph{OK}. You verify correctly his identity and he does the
+same to you. Then, at home, you sign his key. But you set a \emph{none} trust level, because you think he is not yet skilled enough. This \emph{none} trust level does not forbid you from asking him, one month later, how he does with it, figure of his seriousness, and raise
+his trust level. This \emph{none} trust level does not forbid him as well from granting you a high or low trust level. And other people sign his key as well.
+Signatures that can be positive !\\
 
-But you set a \emph{none} trust level, because you think he is not yet
-skilled enough.
-
-This \emph{none} trust level does not forbid you from asking him, one
-month later, how he does with it, figure of his seriousness, and raise
-his trust level.
-
-This \emph{none} trust level does not forbid him as well from granting
-you a high or low trust level. And other people sign his key as well.
-Signatures that can be positive !
-
-\emph{You should not feel ashamed or disrespectful to set a low trust
-level to Arthur.}
+\emph{You should not feel ashamed or disrespectful to set a low trust level to Arthur.}
 
 \subsection{Miriam}\label{miriam}
 
-Miriam tells you she is a Debian developer. You check her ID and
-key.\\At home, you check also her Debian dev' page.
-
-So you sign her key with a full trust level because you know Debian dev'
-use a lot Gpg with seriousness.
+Miriam tells you she is a Debian developer. You check her ID and key. At home, you check also her Debian dev' page. So you sign her key with a full trust level because you know Debian dev' use a lot Gpg with seriousness.
 
 \subsection{Greg}\label{greg}
 
-Greg tells you he uses Gpg often. After having checked his key you sign
-it with a marginal trust, because you have no special reason to grant
-more.
+Greg tells you he uses Gpg often. After having checked his key you sign it with a marginal trust, because you have no special reason to grant more.
 
 \subsection{Karolina}\label{karolina}
 
-Karolina tells you she has a really good signature system, well
-described in a written document available on her blog (it's a
-\emph{signing policy}).
-
-You decide to grant her a full trust, because of this signing policy,
-that you think it is well designed and fair.
+Karolina tells you she has a really good signature system, well described in a written document available on her blog (it's a
+\emph{signing policy}). You decide to grant her a full trust, because of this signing policy, that you think it is well designed and fair.
 
 \section{The Web of Trust}\label{the-web-of-trust}
 
 What is the Web of Trust ?
 
-The Web of Trust are all the ITL, added and set together in a complete
-chain:
+The Web of Trust are all the ITL, added and set together in a complete chain:
 
 You set a marginal trust in Greg's key, his ITL has also marginal trust.
 
-You set a full trust in Miriam. It's like getting all her contacts
-directly into your trust link.\\And it's Miriam who defined if you
-should trust this or this person that you never meet actually - because
-you trust Miriam's judgment.\\Then, if Miriam sets a person to high
-trust level, then this third person also get in your \emph{larger} trust
-link.
+You set a full trust in Miriam. It's like getting all her contacts directly into your trust link. And it's Miriam who defined if you
+should trust this or this person that you never meet actually - because you trust Miriam's judgment. Then, if Miriam sets a person to high
+trust level, then this third person also get in your \emph{larger} trust link. But it's really important to understand that you \emph{should not} sign any of the keys already signed by Miriam unless you meet the owner. Miriam did it, so your keys manager will recognize it as valid. Why would you want to sign the key then ?
 
-But it's really important to understand that you \emph{should not} sign
-any of the keys already signed by Miriam unless you meet the
-owner.\\Miriam did it, so your keys manager will recognize it as valid.
-Why would you want to sign the key then ?
-
-Gpg will calculate which actual trust level should be granted to which
-key through the Web of Trust.
-
-By default, Gpg won't go farther than five trust links, and it needs
-three marginal trust signatures on a key to mark it valid, or one full
+Gpg will calculate which actual trust level should be granted to which key through the Web of Trust. By default, Gpg won't go farther than five trust links, and it needs three marginal trust signatures on a key to mark it valid, or one full
 trust signature.
 
 \section{What if \ldots{} ?}\label{what-if}
 
-You have to understand clearly that the Web of Trust is to be considered
-seriously.
+You have to understand clearly that the Web of Trust is to be considered seriously.
 
-For example, political opinion, race, religion, sex nor even your social
-status towards a key owner should never go into consideration when
-granting a trust level.\\Only your judgment about the owner ability to
-maintain its ITL is important!
+For example, political opinion, race, religion, sex nor even your social status towards a key owner should never go into consideration when
+granting a trust level. Only your judgment about the owner ability to maintain its ITL is important! If you meet someone who says you he signs people with great care, with a detailed signing policy, you can greatly admire his seriousness and grant him full trust. Then in the discussion, you understand he is a neonazi pedophile who eats kittens for breakfast with Worcester sauce, you \emph{still should} sign his key !
 
-If you meet someone who says you he signs people with great care, with a
-detailed signing policy, you can greatly admire his seriousness and
-grant him full trust.\\Then in the discussion, you understand he is a
-neonazi pedophile who eats kittens for breakfast with Worcester sauce,
-you \emph{still should} sign his key !
-
-\href{http://giphy.com/gifs/cat-black-and-white-food-S4IWCPAjhbzUc}{\includegraphics{http://i.giphy.com/S4IWCPAjhbzUc.gif}}
-
-Of course you go to the police now and then, but both actions are
-compatibles.
-
-\section{What is my responsibility there ?}\label{what-is-my-responsibility-there}
-
-The Web of trust is a \emph{relative} trust system.
-
-There is no central authority, typically a State, that sets which
-identity is wrong or right.
-
-It's you who should judge what trust level to grant and to whom.
-
-Don't be afraid of such responsibility !
-
-This Web of Trust is democratic: if you grant a wrong trust level, your
-``ballot'' shall be balanced by others.
-
-Well documented \emph{signing policies} strengthen this democratic
-aspect because they are unbiased, as describe above (the neonazi eating
-kittens\ldots{}).
-
-\href{https://www.flickr.com/photos/jmtimages/3286566742/}{\includegraphics{https://farm4.staticflickr.com/3615/3286566742_c673e4845d_z.jpg}}
-
-Responsibility is individual and distributed. It's actually P2P !
-\emph{We the People} are the authority who validate keys.
+Of course you go to the police now and then, but both actions are compatibles.
 
 \section{Falsehood ?}\label{falsehood}
 
 \subsection{What if someone tries to screw me with a fake key ?}\label{what-if-someone-tries-to-screw-me-with-a-fake-key}
 
-First, signing a key, you also sign a mail address. So you have also to
-check it.
-
-And the most simple in that case is to ask the person to send you a
-signed mail using it (can be done later, no problem).\\That way, you are
-sure that you have sign the key belonging to the person you met, who
-owns also this mail address.
-
-Yet, it's a bit heavy. Choose to do it or not.
+First, signing a key, you also sign a mail address. So you have also to check it. And the most simple in that case is to ask the person to send you a signed mail using it (can be done later, no problem). That way, you are sure that you have sign the key belonging to the person you met, who owns also this mail address. Yet, it's a bit heavy. Choose to do it or not.
 
 \subsection{One might want to write to someone unknown. How to be sure to get the right key ?}\label{one-might-want-to-write-to-someone-unknown.-how-to-be-sure-to-get-the-right-key}
 
 It's the purpose of the Web of Trust.
 
-If you wish to write to Valentina, and some malevolent persons
-engineered some fake key(s), uploaded it on the keyservers, how to be
-sure to get the right one ?
-
-There are much chances Valentina's key is the one with the most
-signatures.\\And, really important, the more these signatures are
-diverse (nationalities, functions\ldots{}), the safer the key will be !
-
-It is easy, for example, to create keys with twenty signatures on it.
-
-It is much harder (not to say impossible) to engineer a key with one or
-two \emph{fake} signatures from Debian dev'. And it is really easy to
-have your key signed by a Debian dev' ! Not because they are \emph{easy}
-people. Because they are widespread. If you live in a big occidental
-city, there are much chances your have a Debian dev close by, and that
-(s)he will sign your key (following his/her signing policy) in exchange
-for a nice moment in a bar\ldots{}
-
-If it's easy to create fake keys, it's also easy to make it signed and
-validated by a public person, with a public identity (Debian or free
-software dev', blog writer, member of an association\ldots{})
+If you wish to write to Valentina, and some malevolent persons engineered some fake key(s), uploaded it on the keyservers, how to be
+sure to get the right one ? There are much chances Valentina's key is the one with the most signatures. And, really important, the more these signatures are
+diverse (nationalities, functions\ldots{}), the safer the key will be !\\It is easy, for example, to create keys with twenty signatures on it. It is much harder (not to say impossible) to engineer a key with one or two \emph{fake} signatures from Debian dev'. And it is really easy to
+have your key signed by a Debian dev' ! Not because they are \emph{easy} people. Because they are widespread. If you live in a big occidental
+city, there are much chances you have a Debian dev close by, and that (s)he will sign your key (following his/her signing policy) in exchange
+for a nice moment in a bar. If it's easy to create fake keys, it's also easy to make it signed and validated by a public person, with a public identity (Debian or free software dev', blog writer, member of an association\ldots{})
 
 And when you have to choose, you will choose this last key.
+
+\section{What is my responsibility there ?}\label{what-is-my-responsibility-there}
+
+The Web of trust is a \emph{relative} trust system. There is no central authority, typically a State, that sets which identity is wrong or right. It's you who should judge what trust level to grant and to whom. Don't be afraid of such responsibility ! This Web of Trust is democratic: if you grant a wrong trust level, your ``ballot'' shall be balanced by others. Well documented \emph{signing policies} strengthen this democratic aspect because they are unbiased, as describe above (the neonazi eating kittens\ldots{}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./images/justice.jpg}
+\caption{The shadow of Justice}
+\end{figure}
+
+Responsibility is individual and distributed. It's actually P2P ! \emph{We the People} are the authority who validate keys.
 
 \section{Exercise}\label{exercise}
 
 OK, you understand the Web of Trust ?
 
-Don't worry, there will be other articles for more details. And you can
-still come there to read again and again.
-
-I will ask you, as today's exercise, to sign the tutorial's key, to
-apply the trust you feel fine and then mail it to me.
-
-Normally, you should not do that OK ? We have not met, no Id checked
-performed.
-
-This is why I wrote in the early articles the keys will be used only for
-the tutorial purposes.
+I will ask you, as exercise, to sign the tutorial's key, to apply the trust you feel fine and then mail it to me. Normally, you should not do that OK ? We have not met, no Id checked performed. This is why I wrote in the early chapters the keys will be used only for the tutorial purposes.
 
 \subsection{How do I do ?}\label{how-do-i-do}
 
-In your keys manager, select the tutorial key, then use the
-\textbf{\emph{Sign}} option.
+In your keys manager, select the tutorial key, then use the \textbf{\emph{Sign}} option. The software will ask you which trust level to grant to the key. If you have several private keys, it will ask you also which one to sign with. You can also use the key properties dialog box and simply change the trust level. Signing will occur automatically.
 
-The software will ask you which trust level to grant to the key. If you
-have several private keys, it will ask you also which one to sign with.
+Then you have to export it in a file, like you did before when creating it, and join this file. When I fetch it, the signatures will add to the
+other signatures of the key. I will, after, mail you your own key signed with the tutorial one.
 
-You can also use the key properties dialog box and simply change the
-trust level. Signing will occur automatically.
-
-Then you have to export it in a file, like you did before when creating
-it, and join this file. When I fetch it, the signatures will add to the
-other signatures of the key. I will, after, mail you your own key signed
-with the tutorial one.
-
-Just let you know also that KGpg (and other softwares) have an option to
-sign the key and mail it directly in one movement.
+Just let you know also that KGpg (and other softwares) have an option to sign the key and mail it directly in one movement.
 
 \subsection{Precisions}\label{precisions}
 
-Some softwares (KGpg for example) focus on the identity checking to tell
-you which trust level fits best for you. It means that, as the identity
-was checked fine this time, it will be done the same way later.
-
-This does not change the meaning of your signature. My statements above
-are still valid: the trust level granted tells about how much you judge
-the key owner able to maintain his/her ITL.
+Some softwares (KGpg for example) focus on the identity checking to tell you which trust level fits best for you. It means that, as the identity
+was checked fine this time, it will be done the same way later. This does not change the meaning of your signature. My statements above are still valid: the trust level granted tells about how much you judge the key owner able to maintain his/her ITL.
 
 It is still that trust level you have to set.
 
-These softwares have some wrong ergonomic. If you have questions, don't
-hesitate to read again this article or to write me.
+These softwares have some wrong ergonomic. If you have questions, don't hesitate to read again more documentations, or to write me.
